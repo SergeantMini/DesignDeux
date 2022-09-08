@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="es_MX">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+		body{
+			font-family: 'Montserrat';font-size: 22px;
+		}
+	</style>
+	<script>
+		/*
+			Carousel
+		*/
+		$('#carousel-example').on('slide.bs.carousel', function (e) {
+			/*
+				CC 2.0 License Iatek LLC 2018 - Attribution required
+			*/
+			var $e = $(e.relatedTarget);
+			var idx = $e.index();
+			var itemsPerSlide = 4;
+			var totalItems = $('.carousel-item').length;
+		 
+			if (idx >= totalItems-(itemsPerSlide-1)) {
+				var it = itemsPerSlide - (totalItems - idx);
+				for (var i=0; i<it; i++) {
+					// append slides to end
+					if (e.direction=="left") {
+						$('.carousel-item').eq(i).appendTo('.carousel-inner');
+					}
+					else {
+						$('.carousel-item').eq(0).appendTo('.carousel-inner');
+					}
+				}
+			}
+		});
+		
+		$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+	</script>
+	
+    <title>DEUX Diseño de Experiencia</title>
+	
+  </head>
+  
+  <body>
+	<div id="inicio" style="background-color: #EDDAA8;"><!--DIV DE LA PRIMERA PARTE EN COLOR AMARILLO -->
+		
+		<div id="fondotopnav" style="background-image:url('./imagenes/degradado-fondoo.jpg');background-repeat: no-repeat;">
+			<style>
+				@media only screen and (max-width: 499px) {
+					#fondotopnav{
+						background-image: url('./imagenes/fondoMovil.svg');
+						background-size: 500px 400px;
+					}
+				}
+				@media only screen and (min-width: 768px) {
+					#fondotopnav{
+						background-image: url('./imagenes/degradado-fondoo.jpg');
+					}
+				}
+			</style>
+			<div align="center" id="textologomenu">
+				<table style="width:100%;"><!--TABLA CON LOGOTIPO E IDIOMAS -->
+					<tr>
+					  <th width="50%">
+						  <div class="container" style="padding-left:2%;padding-top:5px;">
+							<img align="left" style="min-width:100px;max-width:150px;cursor: pointer;" onclick="location.href='/index.html'" src="./images/negativo-_logo_deux.svg">
+						  </div>
+					  </th>
+					  <th width="50%" style="text-align:right;">
+					  <div class="container" style="padding-top:5px;">
+						  <p align="right">EN | <span style="color:white;">ES</span></p>
+					  </div>
+					  </th>
+					</tr>
+				  </table>
+			</div>
+			<div class="topnav" id="myTopnav" style="width: 100%; display: flex; justify-content: center;">
+				<div class="topnav-centered" style="color: white;">
+					<a style="visibility: hidden;" href="#Inicio"></a>
+					<a href="#Inicio" class="active" onClick="location.href='home.html'">Inicio</a>
+					<a href="#nosotros" onClick="location.href='nosotros.html'">Servicios</a>
+					<a href="#locales" onClick="location.href='locales.html'">Catalogo</a>
+					<a href="#galeria" onClick="location.href='galeria.html'">Equipo</a>
+					<a href="#Contacto" onClick="location.href='contacto.html'">Contacto</a>
+				</div>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+		</div>
+		<!-- responsive top menu -->
+		<script>
+			/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+			}
+		</script>
+		
+		<br><br>
+	
+	<div style="background-color:white;width:100%;"> <!--DIV EN COLOR BLANCO -->
+
+		<BR>
+		
+			<div class="col-sm">
+				<div class="container" align="left">
+					<ul style="color: black;">
+						<li><a class="active" href="#inicio">01. BRANDING</a></li>
+						<li><a href="#servicios">02. PUBLICIDAD</a></li>
+						<li><a href="#paquetes">03. WEB
+						<li><a href="#catalogo">04. SOCIAL MEDIA</a></li>
+						<li><a href="#clientes">05. PRESENTACIONES</a></li>
+						<li><a href="#redes">06. AUDIOVISUALES</a></li>
+						<li><a href="#contacto">07. LEGALIDAD/DOCUMENTACIÓN</a></li>
+					  </ul>
+				</div>
+			</div>
+			
+		<BR>
+		<style>
+			#contenidotarjetas{
+				width: 210px;
+				height: 150px;
+				left: 264px;
+				top: 1181px;
+
+				font-family: Montserrat;
+				font-style: normal;
+				font-weight: 300;
+				font-size: 12px;
+				line-height: 30px;
+				/* or 250% */
+
+				letter-spacing: 0.227143px;
+				text-align:left;
+				color: #272727;
+			}
+
+			.carousel-control-prev-icon,
+			.carousel-control-next-icon {
+			  height: 100px;
+			  width: 100px;
+			  background-size: 100%, 100%;
+			  border-radius: 50%;
+			  background-image: none;
+			}
+
+			.carousel-control-next-icon:after
+			{
+			  content: '>';
+			  width:5px;
+			  height:10px;
+			  font-size: 55px;
+			  color: black;
+			}
+
+			.carousel-control-prev-icon:after {
+			  content: '<';
+			  width:5px;
+			  font-size: 55px;
+			  color: black;
+			}
+			#botoncotizar{
+				width:150px;
+				height:32px;
+				background-color:transparent;
+				color:#D8B75A;
+				font-size:18px;
+				border-radius: 5px;
+				border: solid 1px #D8B75A;
+			}
+		</Style>
+		
+		<br><br><br>
+		
+		<div class="container" id="catalogo" style="text-align:left;width:100%;" ><!-- CONTENEDOR 03.CATÁLOGO -->
+			<style>
+				div.transbox {
+				  background-color: gray;
+				  border: 0px solid black;
+				  opacity: 0.6;
+				  width: 100%;
+				}
+				
+				#titulotjetclient{
+					width: 187px;
+					height: 22px;
+					left: 174px;
+					top: 2598px;
+					color: white;
+
+					font-family: Montserrat;
+					font-style: normal;
+					font-weight: bold;
+					font-size: 18px;
+					line-height: 22px;
+					/* identical to box height */
+
+					letter-spacing: 0.340714px;
+				}
+				
+				#cuerpotjtclient{
+					width: 197px;
+					height: 32px;
+					left: 174px;
+					top: 2624px;
+
+					font-family: Roboto;
+					font-style: italic;
+					font-weight: 300;
+					font-size: 12px;
+					line-height: 14px;
+					letter-spacing: 0.227143px;
+
+					color: #FFFFFF;
+				}
+				
+				#vmastjtclient{
+					width: 197px;
+					height: 16px;
+					left: 174px;
+					top: 2666px;
+
+					font-family: Roboto;
+					font-style: italic;
+					font-weight: 300;
+					font-size: 12px;
+					line-height: 14px;
+					text-align: right;
+					letter-spacing: 0.227143px;
+					text-decoration-line: underline;
+
+					color: #FFFFFF;
+					cursor:grab;
+				}
+				
+				#tjtclient{
+				  background-repeat: no-repeat;
+				  background-size:100% 100%;
+				  border-radius: 0px;
+				  height: 199px;
+				  width: 218px;
+				}
+				
+				#tjtclient:hover div#cajagris {
+					opacity: 1;
+				#display:block;
+				transition: opacity 0.2s linear 0s;
+				}
+				
+				#cajagris{
+						opacity: 0;
+				#display:none;
+				transition: opacity 0s ease 0s, all 0s ease 0s, all 0s linear 0s;
+				background-color: rgba(0, 0, 0, .5);
+				overflow: hidden;
+				}
+				
+				#tjtcatalogoesp{
+					padding-top: 2%;
+					padding-bottom: 2%;
+				}
+				#containerpads{
+					padding-top:15%;
+					padding-bottom:10%;
+				}
+			</style>
+			
+		    <div class="row"><!-- TÍTULO 03.CATALOGO -->
+				<div class="col-sm">
+					<h2 id="subtitulosprincip">01. <span style="color:gray;">BRANDING</span></h2>
+				</div>
+		    </div>
+			
+			<div class="container" style="max-width:920px;" align="center"> <!-- CONTENEDOR DE CATÁLOGO -->
+				<div class="row" align="center"> <!-- 1° FILA DE CATÁLOGO -->
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div class="element" id="tjtclient" style="background-image: url('./images/catalogo/kali-mockup-g.png');">
+							<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												KALI JEWELLERY
+											</h3>
+											<p id="cuerpotjtclient">
+												Branding, empaque, social media
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/piki-pops-mockup-g.png');" id="tjtclient">
+							<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+										<h3 id="titulotjetclient">
+											PIKI-POP'S
+										</h3>
+										<p id="cuerpotjtclient">
+											Branding, empaque, social media
+										</p>
+										<!--p id="vmastjtclient">
+											ver imagen
+										</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+					    </div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/triptico-cal-penuela-g.png');" id="tjtclient">
+							<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+										<h3 id="titulotjetclient">
+											CAL PEÑUELA
+										</h3>
+										<p id="cuerpotjtclient">
+											Publicidad, presentación corporativa y video corporativo
+										</p>
+										<!--p id="vmastjtclient">
+											ver imagen
+										</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/sitio-intop-g.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												INTOP SOLUTIONS
+											</h3>
+											<p id="cuerpotjtclient">
+												Identidad corporativa, sitio web, social media
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row"> <!-- 2° FILA DE CATÁLOGO -->
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/caseton-mockup-grande.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												CASETÓN & MÁS
+											</h3>
+											<p id="cuerpotjtclient">
+												Identidad corporativa, campaña publicitaria, social media, publicidad
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/kuali-etiqueta-mockup.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												KUALI
+											</h3>
+											<p id="cuerpotjtclient">
+												Branding, etiquetas
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/matutino-poster-g.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												MATUTINO
+											</h3>
+											<p id="cuerpotjtclient">
+												Campaña publicitaria, carteles
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/mockup-tarjeta-vitrina-g.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient" style="font-size:16px;">
+												LA VITRINA DE CAFÉ
+											</h3>
+											<p id="cuerpotjtclient">
+												Identidad corporativa, empaque, social media
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row"> <!-- 3° FILA DE CATÁLOGO -->
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/redes-mockup-g.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient" STYLE="font-size: 16px;">
+												INMOBILIARIA TRESS
+											</h3>
+											<p id="cuerpotjtclient" >
+												Identidad corporativa, empaque, social media
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/mockup-ilevento-video-c.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												ILEVENTO
+											</h3>
+											<p id="cuerpotjtclient">
+												Identidad corporativa, diseño de interfaces, publicidad y social media
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/mockup-empaque-mexsofg.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												MEXSOF
+											</h3>
+											<p id="cuerpotjtclient">
+												Identidad corporativa, diseño de interfaces, publicidad y social media
+											</p>
+											<!--p id="vmastjtclient">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="container" id="tjtcatalogoesp">
+							<div style="background-image: url('./images/catalogo/redes-sov-mockup-g.png');" id="tjtclient">
+								<br><br>
+								<div class="transbox" id="cajagris" style="width:max;">
+									<div class="container" id="containerpads">
+										<span>
+											<h3 id="titulotjetclient">
+												SOV
+											</h3>
+											<p id="cuerpotjtclient">
+												Identidad corporativa, social media
+											</p>
+											<!--p id="vmastjtclient" onclick="window.open('./images/catalogo/redes-sov-mockup-g.png','_blank')">
+												ver imagen
+											</p-->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- FIN CONTENEDOR DE CATÁLOGO -->
+		</div> <!-- FIN CONTENEDOR 03.CATÁLOGO -->
+		
+		<br><br>
+		
+		
+		<br><br>
+	</div> <!--FIN DIV EN COLOR BLANCO -->
+	
+	<!-- Footer -->
+	<footer class="" style="background: black;">
+        <!--nuevo footer-->
+        <div class="row" style="width:95%;padding-top:20px;padding-bottom:20px;padding-left:10px;">
+            <div class="col-sm-3">
+                <div class="container">
+                    <img src="/images/deux_logo positivo.svg" class="w-50 logo-footer" style="width:150px;"/>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <h6 id="titulosfooter">
+                    Menú
+                </h6>
+                <ul>
+                    <li> <a id="textosfooter" href="/index.html">Inicio</a> </li>
+                    <li> <a id="textosfooter" href="/Cotizaciones.html">Cotización</a> </li>
+                    <li> <a id="textosfooter" href="/Descargables.html">Descargables</a> </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h6 id="titulosfooter">
+                    Contáctanos
+                </h6>
+                <ul >
+                    <li id="textosfooter"> hello@designdeux.com</li>
+                    <li id="textosfooter"> socialmedia@designdeux.com </li>
+                    <li id="textosfooter"> CDMX, México </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div>
+                    <h6 id="titulosfooter">
+                        Social Media
+                    </h6>
+                    <table style="text-align:center;">
+                        <tr>
+                            <th>
+                                <div class=" iconosRSfooter">
+                                    <img src="/images/footer/instagram-blanco1.svg" onclick="location.href='https://www.instagram.com/deux.diseno.mx/'" style="width:20px;margin-top:-2px">
+                                </div>
+                            </th>
+                            <th>
+                                <div class=" iconosRSfooter">
+                                    <img src="/images/footer/facebook-blanco1.svg" onclick="location.href='https://www.facebook.com/deux.diseno.mx'" style="width:10px;">
+                                </div>
+                            </th>
+                            <th>
+                                <div class=" iconosRSfooter">
+                                    <img src="/images/iconos/icono_youtube-01.svg" onclick="location.href='https://www.youtube.com/channel/UCk9jq6eN76kU0gWe9x1CoVA'" style="width:22px;margin-top:-2px;">
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--finnuevofooter-->
+	</footer>
+	
+  </body>

@@ -1,0 +1,412 @@
+html{
+    scroll-behavior:smooth;
+    font-family: 'Montserrat'; 
+}
+
+.button{
+    background-color: #E8CA77;
+    border-radius: 20px;
+    border-color: transparent;
+    font-weight: 800;
+    color:white;
+    width: 300px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.button2{
+    background-color: #B9B9B9;
+    border-radius: 20px;
+    border-color: transparent;
+    color:white;
+    width: 300px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.iconosRS{
+    background-color: #D8D8D8;
+    border-radius: 50%;
+    border-color: transparent;
+    width:50px;
+    height:50px;
+    cursor: pointer;
+    margin-right:5px;
+    margin-left:5px;
+}
+
+.iconosRS:hover{
+    background-color: #E4B952;
+}
+
+.iconosRSfooter{
+    background-color: #D8D8D8;
+    border-radius: 50%;
+    border-color: transparent;
+    width:35px;
+    height:35px;
+    cursor: pointer;
+    margin-right:5px;
+    margin-left:5px;
+}
+
+.iconosRSfooter:hover{
+    background-color: #E4B952;
+}
+
+.labelsCotiz{
+    font-size: 13px;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.textosCB{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 20px !important;
+    font-weight: 500;
+}
+
+#botonNar{
+    background-color:#E4B952;
+    border-radius: 20px;
+    color:white;
+    border-color:transparent;
+    height:35px;
+    width: 200px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.tabActiva
+{
+	border-bottom: 3px solid #FFFFFF;
+}
+.barraNav
+{
+	background-color: #e3f2fd;
+}
+.tarjeta
+{
+	background: #777;
+	margin-top: 7px;
+}
+
+.tarjeta1{
+	background: #777;
+	margin-top: 7px;
+}
+.tituloTarjeta
+{
+	border-top: 1px solid #DDDDDD;
+	cursor: pointer;
+	color: #DDDDDD;
+	padding-top: 7px;
+}
+.textoTarjeta
+{
+	color: #DDDDDD;
+}
+.titulo
+{
+	font-family: 'Roboto', sans-serif;
+	font-weight: medium;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+.subtitulo
+{
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.titulo6inicio{
+	padding-top: 30px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #4C4C4C;
+	font-size: 34px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+.correo{
+	color: #982A27;
+	font-size: 34px;
+	font-family: 'Roboto', sans-serif;
+}
+.correo2{
+	color: #44557A;
+	font-size: 34px;
+	font-family: 'Roboto', sans-serif;
+}
+.parte6inicio{
+	text-align: center;
+	padding-bottom: 20px;
+	color: #4C4C4C;
+	font-size: 34px;
+	font-family: 'Roboto', sans-serif;
+}
+.titulopart4{
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: black;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: medium;
+}
+.card-title{
+	text-align: left;
+	color: black;
+	font-size: 35px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+#titulosfooter{
+    color: #D8B75A;
+    font-size:12px;
+    font-weight: 700;
+}
+#textosfooter{	
+    color: white;
+    font-size: 10px;
+    line-height: 17px;
+}
+#redessocfooter{
+    height: 20px;
+    width: 20px;
+    padding-top:9px;
+}
+#divrsfooter{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-color: #51545E;
+    text-align: center;
+}
+
+.titulofooter{
+	text-align: center;
+	color: white;
+	font-size: 34px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+footer h6 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    position: relative;
+}
+     .btn-footer {
+                 color: grey;
+              
+                text-decoration: none;
+                border: 1px solid;
+                border-radius: 43px;
+                font-size: 13px;
+                padding: 7px 30px;
+                line-height: 47px;
+     }
+     .btn-footer:hover {
+                
+                text-decoration: none;
+               
+     }
+    .form-footer input[type="text"] {
+        border: none;
+    outline: none;
+    padding-left: 10px;
+    
+}
+::placeholder {
+    font-size: 14px;
+    padding-left: 10px;
+}
+ .form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+    color: #fff;
+    outline: none;
+    padding: 2px 12px;
+}
+     .social .fa {
+    color: grey;
+    font-size: 22px;
+    padding: 10px 15px;
+    background: #3c3c3c;
+}
+     footer ul li {
+    list-style: none;
+    display: block;
+}
+  footer ul  {
+   padding-left: 0;
+}
+footer ul  li a{
+  text-decoration: none;
+  color: grey;
+  text-decoration:none;
+}
+a:hover {
+    text-decoration: none;
+    color: #f5f5f5 !important;
+    
+}
+.logo-part {
+    height: 100%;
+    }
+   
+
+
+.box{
+        position: relative;
+        display: inline-block; /* Make the width of box same as image */
+    }
+
+.box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 60%; /* Set the width of the positioned div */
+    }
+
+/*
+    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+    code customized by Azmind.com
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* MD */
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* LG */
+@media (min-width: 991px) {
+    /* show 4th item */
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
